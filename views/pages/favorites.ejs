@@ -1,0 +1,17 @@
+<main class="cards">
+    <% if(jokes.length === 0){ %>
+    <p>No available jokes</p>
+   <% } else {%>
+    <% jokes.forEach(joke =>{ %>
+    <div class="card">
+      <h3><%= joke.id%></h3>
+      <p><%= joke.type%></p>
+      <p><%= joke.setup%></p>
+      <p><%= joke.punchline%></p>
+      <form action="/details/<%= joke.id%>" method="GET">
+        <button type="submit">Details</button>
+      </form>
+    </div>
+    <% });}%>
+  </main>
+  
