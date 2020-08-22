@@ -1,0 +1,18 @@
+<main>
+  <div class="card">
+    <h3><%= joke.id%></h3>
+    <p><%= joke.type%></p>
+    <p><%= joke.setup%></p>
+    <p><%= joke.punchline%></p>
+    <form action="/delete/<%= joke.id%>?_method=delete" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+
+    <form action="/update/<%= joke.id%>?_method=put" method="POST">
+      <input name="type" type="text" value="<%= joke.type%>" /><br>
+      <input name="setup" type="text" value="<%= joke.setup%>" /><br>
+      <input name="punchline" type="text" value="<%= joke.punchline%>" /><br>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</main>

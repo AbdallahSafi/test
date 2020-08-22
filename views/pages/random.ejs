@@ -1,0 +1,15 @@
+<main class="cards">
+  <div class="card">
+    <h3><%= joke.id%></h3>
+    <p><%= joke.type%></p>
+    <p><%= joke.setup%></p>
+    <p><%= joke.punchline%></p>
+    <form action="/save" method="POST">
+        <input name="type" type="hidden" value="<%= joke.type%>" />
+        <input name="setup" type="hidden" value="<%= joke.setup%>" />
+        <input name="punchline" type="hidden" value="<%= joke.punchline%>" />
+        <button type="submit">Add favorite</button>
+      </form>
+    </div>
+  </div>
+</main>
